@@ -15,10 +15,10 @@ def merge(nums,left,mid,right):
     while j<=right:
         temp.append(nums[j])
         j+=1
-    for i in range(left,right+1): # not high as range excluded the last index [ I already made this mistake]
-        nums[i]=temp[i-left]
+    for k in range(left,right+1): # not high as range excluded the last index [ I already made this mistake]
+        nums[k]=temp[k-left]
 def mergesort(nums,low,high):
-    if low == high:
+    if low >= high:
         return
     mid=(low+high)//2
     mergesort(nums,low,mid)
